@@ -2,8 +2,8 @@ import React from "react";
 
 function About() {
   return (
-    <section>
-      <div className="d-flex mx-7 border-bottom py-3">
+    <section className="mx-12">
+      <div className="d-flex border-bottom py-3">
         <img
           className="align-self-start pr-5"
           src="https://via.placeholder.com/150"
@@ -11,7 +11,7 @@ function About() {
         />
         <h1 className="align-self-end">About Me</h1>
       </div>
-      <p className="mx-7 pt-3">
+      <p className="pt-3">
         I'm baby pop-up bitters cliche mixtape. Pitchfork keytar pug, plaid
         kitsch squid retro cronut twee poutine affogato lyft. Vice brooklyn
         live-edge snackwave polaroid. Godard edison bulb air plant art party
