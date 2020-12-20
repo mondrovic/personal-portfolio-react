@@ -5,24 +5,28 @@ import { SiAboutDotMe } from "react-icons/si";
 
 function Nav() {
   return (
-    <nav className="navbar">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a href="#" className="nav-link">
+    <nav className="navbar-cstm">
+      <ul className="navbar-nav-cstm">
+        <div className="my-name">
+          <span className="pt-4 initials">MO</span>
+          <span className="pt-4 link-text-cstm">Matthew Ondrovic</span>
+        </div>
+        <li className="nav-item-cstm">
+          <a href="#" className="nav-link-cstm">
             <SiAboutDotMe size={30} color="white" />
-            <span className="link-text">About</span>
+            <span className="link-text-cstm">About</span>
           </a>
         </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
+        <li className="nav-item-cstm">
+          <a href="#" className="nav-link-cstm">
             <FaFolderOpen size={30} color="white" />
-            <span className="link-text">Projects</span>
+            <span className="link-text-cstm">Projects</span>
           </a>
         </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
+        <li className="nav-item-cstm">
+          <a href="#" className="nav-link-cstm">
             <IoIosContact size={30} color="white" />
-            <span className="link-text">Contact</span>
+            <span className="link-text-cstm">Contact</span>
           </a>
         </li>
       </ul>
