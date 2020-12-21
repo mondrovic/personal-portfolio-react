@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
+  const [menus] = useState([
+    { name: "about", description: "About me page with short bio" },
+    { name: "projects", description: "Project page showing links to my work" },
+    { name: "contact", description: "Page that links to contact form" },
+  ]);
+
+  const [menuSelected, setMenuSelected] = useState(menus[0].name);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex flex-column">
+      <Nav
+        menus={menus}
+        menuSelected={menuSelected}
+        setMenuSelected={setMenuSelected}
+      />
+      <main>
+        {menuSelected === "about" && <About />}
+        {menuSelected === "contact" && <Contact />}
+        {menuSelected === "projects" && <Projects />}
+      </main>
+      <Footer />
     </div>
   );
 }
