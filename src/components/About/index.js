@@ -2,13 +2,15 @@ import React from "react";
 
 function About() {
   return (
-    <section className="mx-12">
+    <section className="mx-12 about">
       <div className="d-flex border-bottom py-3">
-        <img
-          className="align-self-start pr-5"
-          src="https://via.placeholder.com/150"
-          alt="placeholder"
-        />
+        <div id="image-crop">
+          <img
+            className="align-self-start pr-5"
+            src={require("../../assets/portfolio.jpg").default}
+            alt="placeholder"
+          />
+        </div>
         <h1 className="align-self-end">About Me</h1>
       </div>
       <p className="pt-3">

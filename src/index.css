@@ -20,6 +20,7 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 code {
@@ -27,9 +28,19 @@ code {
     monospace;
 }
 
+body #root {
+  height: 100%;
+}
+
+#root .flex-column {
+  height: 100%;
+}
+
 main {
   margin-left: 5rem;
   padding: 1rem;
+  flex: 1 0 auto;
+  min-height: auto;
 }
 
 h1 {
@@ -38,6 +49,21 @@ h1 {
 
 p {
   font-family: "Roboto", serif;
+}
+
+#image-crop {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.about img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
 }
 
 /* Nav start */
@@ -114,47 +140,6 @@ p {
   margin: 0 1.5rem;
 }
 
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .navbar-cstm {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
-  }
-
-  .navbar-nav-cstm {
-    flex-direction: row;
-  }
-
-  .nav-link-cstm {
-    justify-content: center;
-  }
-
-  main {
-    margin: 0;
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .navbar-cstm {
-    top: 0;
-    width: 5rem;
-    height: 100vh;
-  }
-
-  .navbar-cstm:hover {
-    width: 15rem;
-  }
-
-  .navbar-cstm:hover .link-text-cstm {
-    display: inline;
-  }
-
-  .navbar-cstm:hover .initials {
-    display: none;
-  }
-}
 /* Nav end */
 
 /* Form start */
@@ -190,4 +175,58 @@ figure figcaption {
 
 .mx-12 {
   margin: 0 12rem 0 12rem;
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar-cstm {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar-cstm:hover {
+    width: 15rem;
+  }
+
+  .navbar-cstm:hover .link-text-cstm {
+    display: inline;
+  }
+
+  .navbar-cstm:hover .initials {
+    display: none;
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar-cstm {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .navbar-nav-cstm {
+    flex-direction: row;
+  }
+
+  .nav-link-cstm {
+    justify-content: center;
+  }
+
+  .my-name {
+    display: none;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .mx-12 {
+    margin: 0;
+  }
+
+  .photos img {
+    max-width: 100%;
+  }
 }

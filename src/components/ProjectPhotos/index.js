@@ -43,24 +43,22 @@ const ProjectPhotos = () => {
   ]);
 
   return (
-    <div>
-      <div className="flex-row img-container">
-        {photos.map((image, i) => [
-          <figure>
-            <a href={image.github} target="_blank">
-              <img
-                src={require(`../../assets/${i}.jpg`).default}
-                alt={image.name}
-                key={image.name}
-              />
-            </a>
-            <figcaption>
-              {`${image.name} \n
+    <div className="flex-row photos">
+      {photos.map((image, i) => [
+        <figure>
+          <a href={image.github} target="_blank">
+            <img
+              src={require(`../../assets/${i}.jpg`).default}
+              alt={image.name}
+              key={image.name}
+            />
+          </a>
+          <figcaption>
+            {`${image.name} \n
               Description: ${image.description}`}
-            </figcaption>
-          </figure>,
-        ])}
-      </div>
+          </figcaption>
+        </figure>,
+      ])}
     </div>
   );
 };
