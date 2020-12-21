@@ -46,7 +46,7 @@ const ProjectPhotos = () => {
     <div className="flex-row photos">
       {photos.map((image, i) => [
         <figure>
-          <a href={image.github} target="_blank">
+          <a href={image.github} target="_blank" rel="noreferrer">
             <img
               src={require(`../../assets/${i}.jpg`).default}
               alt={image.name}

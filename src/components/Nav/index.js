@@ -21,7 +21,7 @@ function Nav(props) {
         </div>
         <li className="nav-item-cstm">
           <a
-            href="#"
+            href="#about"
             className="nav-link-cstm"
             onClick={() => setMenuSelected(menus[0].name)}
           >
@@ -31,7 +31,7 @@ function Nav(props) {
         </li>
         <li className="nav-item-cstm">
           <a
-            href="#"
+            href="#projects"
             className="nav-link-cstm"
             onClick={() => setMenuSelected(menus[1].name)}
           >
@@ -41,7 +41,7 @@ function Nav(props) {
         </li>
         <li className="nav-item-cstm">
           <a
-            href="#"
+            href="#contact"
             className="nav-link-cstm"
             onClick={() => setMenuSelected(menus[2].name)}
           >

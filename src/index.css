@@ -51,6 +51,10 @@ p {
   font-family: "Roboto", serif;
 }
 
+footer > div {
+  display: inline-block;
+}
+
 #image-crop {
   width: 140px;
   height: 140px;
