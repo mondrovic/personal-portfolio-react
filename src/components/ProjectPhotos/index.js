@@ -40,6 +40,12 @@ const ProjectPhotos = () => {
         "A web application allowing you to input debt and income so financial status can be displayed in an easy to read graph.",
       github: "https://github.com/mondrovic/finance-tracker",
     },
+    {
+      name: "Brewhound-2",
+      category: "full stack",
+      description: "A GraphQL full stack database to search for breweries",
+      github: "https://github.com/mbrassey/brewhound-2",
+    },
   ]);
 
   return (
